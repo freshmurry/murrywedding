@@ -1,4 +1,12 @@
-$body-bg:				#e74c3c;
+@import url(https://fonts.googleapis.com/css?family=Bad+Script|Merriweather+Sans:400,700);
+
+$body-bg:				#e74c3c;	/*This is the body background color*/
+$font-family-sans-serif: 'Bad Script', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height: 45px;
 $brand-primary: #34495e; /*This is a button color*/
 
 @import 'bootstrap';
+
+.navbar-brand {
+	font-weight: bold;
+}
