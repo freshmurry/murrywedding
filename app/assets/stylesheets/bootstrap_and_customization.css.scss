@@ -1,9 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Bad+Script|Merriweather+Sans:400,700);
 
-$body-bg:				#e74c3c;	/*This is the body background color*/
+$body-bg:				#ecf0f1;	/*This is the body background color*/
 $font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height: 45px;
-$brand-primary: #34495e; /*This is a button color*/
+$navbar-default-bg:                white;
+$navbar-default-brand-color:       #e74c3c;
+$brand-primary: #c0392b; /*This is a button color*/
+//$jumbotron-bg:                     white;
 
 @import 'bootstrap';
 
