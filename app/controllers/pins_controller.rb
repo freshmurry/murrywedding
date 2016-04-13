@@ -21,7 +21,7 @@ class PinsController < ApplicationController
     if @pin.save
       redirect_to @pin, notice: 'Pin was successfully created.'
     else
-      render action:'new'
+      render :'new'
     end
   end
 
@@ -29,9 +29,10 @@ class PinsController < ApplicationController
     if @pin.update(pin_params)
       redirect_to @pin, notice: 'Pin was successfully updated.'
     else
-      render action: 'edit'
+      render :'edit'
+    end
   end
-
+    
   def destroy
     @pin.destroy
     redirect_to pins_url
@@ -47,5 +48,4 @@ class PinsController < ApplicationController
     def pin_params
       params.require(:pin).permit(:description)
     end
-  end 
-end
+  end
