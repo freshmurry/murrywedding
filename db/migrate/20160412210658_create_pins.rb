@@ -3,7 +3,7 @@ class CreatePins < ActiveRecord::Migration
     create_table :pins do |t|
       t.string :description
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
