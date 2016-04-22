@@ -1,4 +1,5 @@
 Rails.application.configure do
+Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.9.3-Q16/convert"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
