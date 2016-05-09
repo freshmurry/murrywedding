@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.5.6'
-gem 'paperclip', '~> 5.0.0.beta1'
+gem 'paperclip', '~> 5.0.0.beta'
 gem 'aws-sdk'
 
 group :development, :test do

@@ -46,7 +46,7 @@ class PinsController < ApplicationController
       @pin = Pin.find(id: params[:id])
     end
 
-    def current_user
+    def correct_user
        @pins = current_user.pins.find_by(params[:id])
        redirect_to pins_path, notice: "Not authorized to edit this pin" if @pin.nil? 
     end
