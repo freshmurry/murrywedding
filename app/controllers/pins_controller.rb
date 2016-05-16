@@ -1,6 +1,6 @@
 class PinsController < ApplicationController
  before_action :set_pin, only: [:show, :edit, :update, :destroy]
- #before_action :correct_user, only: [:edit, :update, :destroy]
+ before_action :correct_user, only: [:edit, :update, :destroy]
  before_action :authenticate_user!, except: [:index, :show]
   
   def index
@@ -12,18 +12,17 @@ class PinsController < ApplicationController
 
   def new
     @pin = current_user.pins.build
-    #@pin = Pin.new
   end
 
   def edit
   end
 
   def create
-    @pin = current_user.pins.build(pin_params)
+    @pin = Pin.new(pin_params)
     if @pin.save
      redirect_to @pin, notice: 'Pin was successfully created.'
     else
-      render :new
+      render action: 'new'
     end
   end
 
@@ -31,7 +30,7 @@ class PinsController < ApplicationController
     if @pin.update(pin_params)
       redirect_to @pin, notice: 'Pin was successfully updated.'
     else
-      render :'edit'
+      render action: 'edit'
     end
   end
     
