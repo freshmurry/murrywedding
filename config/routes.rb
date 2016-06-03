@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   get 'pages/home'
 
-resources :pins
-devise_for :users
-root "pages#home"
-get "about" => "pages#about" #creates about_path
+  resources :pins
+  root "pages#home"
+  get "about" => "pages#about" #creates about_path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
