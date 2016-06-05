@@ -1,4 +1,3 @@
-
 <h1>Listing Pins</h1>
 
 <table>
@@ -11,20 +10,20 @@
     </tr>
   </thead>
 
-<tbody> 
+  <div id="pins">
     <% @pins.each do |pin| %>
-      <tr>
-        <td><%= image_tag pin.image.url(:medium) %></td>
-        <td><%= pin.description %></td>
-        <td><%= pin.user.email if pin.user %></td>
-        <td><%= link_to 'Show', pin_path(pin) %></td>
+      <div class="box">
+        <%= image_tag pin.image.url(:medium) %>
+        <%= pin.description %>
+        <%= pin.user.email if pin.user %>
+        <%= link_to 'Show', pin_path(pin) %>
         <% if pin.user == current_user %>
-          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%= link_to 'Edit', edit_pin_path(pin) %>
+          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% end %>
-      </tr>
-   <% end %>
-  </tbody>
+      </div>
+    <% end %>
+  </div>
 </table>
 
 <br>
