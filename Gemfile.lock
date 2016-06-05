@@ -40,6 +40,7 @@ GEM
     autoprefixer-rails (6.3.6)
       execjs
 <<<<<<< HEAD
+<<<<<<< HEAD
     aws-sdk (2.3.4)
       aws-sdk-resources (= 2.3.4)
     aws-sdk-core (2.3.4)
@@ -55,6 +56,15 @@ GEM
       aws-sdk-core (= 2.3.2)
     bcrypt (3.1.11)
 >>>>>>> b9e1b66667d8bf30cc2e2a1f3f9d5e1c4b8ee89e
+=======
+    aws-sdk (2.3.2)
+      aws-sdk-resources (= 2.3.2)
+    aws-sdk-core (2.3.2)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.3.2)
+      aws-sdk-core (= 2.3.2)
+    bcrypt (3.1.11)
+>>>>>>> 798077e82fcd9b18f25ee83e4263d14c4d0ae1bc
     bcrypt (3.1.11-x86-mingw32)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -111,10 +121,15 @@ GEM
     minitest (5.8.4)
     multi_json (1.12.0)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
 >>>>>>> b9e1b66667d8bf30cc2e2a1f3f9d5e1c4b8ee89e
+=======
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+>>>>>>> 798077e82fcd9b18f25ee83e4263d14c4d0ae1bc
     nokogiri (1.6.7.2-x86-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
