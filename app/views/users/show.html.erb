@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="center">
+      <%= image_tag (@user.image), class: "avatar-full" %>
+      <% if current_user && current_user != @user %>
+        <%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post, class: "btn btn-default" %>
+      <% end %>
+    </div>
+    <br/>
+  </div>
+
+  <div class="col-md-9">
+    <h2 class="text-blue"><%= @user.name %></h2>
+    <div class="description row-space-3">
+      <%= @user.description %>
+    </div>
+
+  </div>
+</div>

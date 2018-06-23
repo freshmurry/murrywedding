@@ -2,18 +2,49 @@
 <html>
 <head>
   <title>Pintresting</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Ubuntu|Cabin" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	<meta name="author" content="" />
+    <meta name="keywords" content="..." />
+    <meta name="description" content="App Subtitle">
+    <meta name="google-site-verification" content="..." />
+    <meta property="og:site_name" content="Pinteresting" />
+    <meta property="og:url" content="https://murry-pinteresting.herokuapp.com" />
+    <meta property="og:title" content="Pinteresting | App Subtitle" />
+    <meta property="og:description" content="App Subtitle" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="..." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://murry-pinteresting.herokuapp.com">
+    <meta name="twitter:title" content="App Subtitle" />
+    <meta name="twitter:image" content="..." />
+    
 </head>
+
 <body>
 	
 	<%= render "layouts/header" %>
+	<%= render 'shared/message' %>
+	
+	<% if current_user %>
+    <input type="hidden" id="user_id" value="<%= current_user.id %>">
+  <% end %>
+    
 	<div class="container">
-		<% flash.each do|name, msg| %>
-			<%= content_tag(:div, msg, class: "alert alert-info")%>
-		<% end %>
+
 		<%= yield %>
 	</div>
 

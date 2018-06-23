@@ -11,11 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160425210329) do
-=======
-ActiveRecord::Schema.define(version: 20160603001633) do
->>>>>>> 798077e82fcd9b18f25ee83e4263d14c4d0ae1bc
+ActiveRecord::Schema.define(version: 20180605220224) do
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "context"
+    t.integer  "user_id"
+    t.integer  "conversation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pins", force: :cascade do |t|
     t.string   "description"
@@ -43,6 +61,16 @@ ActiveRecord::Schema.define(version: 20160603001633) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "unread",                 default: 0
+    t.string   "uid"
+    t.string   "image"
+    t.string   "title"
+    t.text     "description"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

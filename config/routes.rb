@@ -1,16 +1,29 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'pages/home'
+  root "pins#index"
 
-<<<<<<< HEAD
-resources :pins
-root "pages#home"
-get "about" => "pages#about" #creates about_path
-=======
   resources :pins
-  root "pages#home"
-  get "about" => "pages#about" #creates about_path
->>>>>>> 798077e82fcd9b18f25ee83e4263d14c4d0ae1bc
+
+  devise_for :users,
+            path: '',		
+            path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
+            controllers: {omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}		
+
+
+  resources :users, only: [:create, :destroy, :edit, :show] do
+    member do
+      get 'photo_upload'
+    end  
+    resources :photos, only: [:create, :destroy]
+  end  
+    
+  resources :conversations, only: [:index, :create]  do		
+     resources :messages, only: [:index, :create]
+   end
+   
+  # get '/notification_settings' => 'settings#edit'		
+  # post '/notification_settings' => 'settings#update'		
+ 		
+   get '/notifications' => 'notifications#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -27,43 +40,4 @@ get "about" => "pages#about" #creates about_path
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
 end
