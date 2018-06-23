@@ -16,6 +16,7 @@ $jumbotron-bg: 								white;
 
 .navbar-brand {
 	font-weight: bold;
+	font-size: 2.0em;
 }
 
 
@@ -251,12 +252,12 @@ div.panel-body {
   background-color: #FFFFFF;
 }
 
-.navbar-default .navbar-brand {
-  color: #2C3E50;
-  font-size: 2.5em;
-  font-weight: bold; font-family: Ubuntu;
-  margin-top: 5px;
-}
+// .navbar-default .navbar-brand {
+//   color: #2C3E50;
+//   font-size: 2.5em;
+//   font-weight: bold; font-family: Ubuntu;
+//   margin-top: 5px;
+// }
 
 ul.nav.navbar-nav.navbar-right a {
   margin-top: 5px;
