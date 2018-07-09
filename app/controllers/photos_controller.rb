@@ -5,20 +5,20 @@ class PhotosController < ApplicationController
 
     if params[:images]
         params[:images].each do |img|
-        @user.photos.create(image: img)
+        @pin.photos.create(image: img)
       end
 
-      @photos = @user.photos
+      @photos = @pin.photos
       redirect_back(fallback_location: request.referer, notice: "Saved...")
     end
   end
 
   def destroy
     @photo = Photo.find(params[:id])
-    @user = @photo.user
+    @pin = @photo.pin
 
     @photo.destroy
-    @photos = Photo.where(user_id: @user.id)
+    @photos = Photo.where(pin_id: @pin.id)
 
     respond_to :js
   end

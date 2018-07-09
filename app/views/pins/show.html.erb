@@ -1,27 +1,46 @@
 <%= link_to 'Back', pins_path %>
 
 <div class="row">
-	<div class="col-md-offset-2 col-md-8">
+	<div class="col-md-offset-3 col-md-6">
 		<div class="panel panel-default">
 		<div class="panel-heading center">
 			<%= image_tag @pin.image.url(:medium) %>
 		</div>
+		
 		<div class="panel-body">
-		<p><%= @pin.description %></p>
-		<p><strong><%= @pin.user.name if @pin.user %></strong></p>
+			<p><%= @pin.description %></p>
 
-		<% if @pin.user == current_user %>
-			<div class="actions">
-            <%= link_to edit_pin_path(@pin) do %>
-              <span class="glyphicon glyphicon-edit"></span>
-              Edit
-            <% end %>
-            <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <span class="glyphicon glyphicon-trash"></span>
-              Delete
-            <% end %>
-          </div>
-		<% end %>
+			<% if @pin.user == current_user %>
+				<div class="action">
+	      	<%= link_to edit_pin_path(@pin) do %>
+	        <span class="glyphicon glyphicon-edit"></span>
+	        	Edit
+	        <% end %>
+	        
+	        <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+	          <span class="glyphicon glyphicon-trash"></span>
+	            Delete
+	        <% end %>
+	      </div>
+			<% end %>
+
+      <% if user_signed_in? %>
+				<div class="comment-form"><hr />
+			  	<h3 class="action">Drop a Comment</h3>
+			  	<%= render 'comments/form' %>
+		    </div>	
+				<hr/>
+				
+				<div class="comment-count">
+		 	 		<span class="tag is-rounded"><%= @pin.comments.count %> comment(s)</span>
+		    </div><br />
+		    	
+		    <section class="section comments">
+			  	<%= render @pin.comments %>
+				</section>
+				<% else %>
+          <li><%= link_to "Sign Up or Log In to leave a comment", new_user_session_path %></li>
+			<% end %>
 		</div>
 	</div>
 

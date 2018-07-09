@@ -4,11 +4,14 @@ $body-bg: 										#ecf0f1;
 $font-family-sans-serif: 			'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:								45px;
 $navbar-default-bg: 					white;
-$navbar-default-brand-color: 	#c0392b;
-$brand-primary: 							#c0392b;
-$jumbotron-bg: 								white;
+$navbar-default-brand-color: 	#34495E;
+$brand-primary: 							#34495E;
+$btn-primary: 							  #34495E;
+$jumbotron-bg: 								#FFF;
 
 @import 'bootstrap';
+@import "bootstrap-sprockets";
+@import 'toastr';
 
 .center {
 	text-align: center;
@@ -31,6 +34,19 @@ $jumbotron-bg: 								white;
   right: 0;
   width: 500px;
   height: 100%;
+}
+
+a.btn.btn-primary {
+	color: #FFF;
+}
+
+img {
+    image-orientation: from-image;
+}
+
+.box .img-circle {
+	width: 28px;
+	height: auto;
 }
 
 // PHOTO UPLOAD
@@ -98,6 +114,7 @@ $jumbotron-bg: 								white;
 
 .avatar-medium {
   width: 48px;
+  border: 1px solid #F0F0F0;
 }
 
 .avatar-large {
@@ -106,6 +123,8 @@ $jumbotron-bg: 								white;
 
 .avatar-full {
   width: 100%;
+  margin-top: 20px;
+  border: 1px solid #F0F0F0;
 }
 
 // FORMS
@@ -180,73 +199,6 @@ $jumbotron-bg: 								white;
   color: #34495E;
 }
 
-// PANELS
-.panel-default .panel-heading {
-  color: #ffffff;
-  background-color: #FFF;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.row-space-1 {
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-
-.row-space-2 {
-  margin-top: 12px;
-  margin-bottom: 12px;
-}
-
-.row-space-3 {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.description {
-  color: #575757;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 25px;
-}
-
-body {
-  color: #565a5c;
-  background-color: #F8F8F8;
-  font-family: "Varela Round", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-}
-
-a {
-  color: #34495E;
-}
-
-.container {
-  width: 80%;
-}
-
-.container h3 {
-  margin-right: -40px;
-  margin-left: -40px;
-}
-
-div.panel-body {
-  margin-right: -55px;
-  margin-left: -55px;
-}
-
-.row {
-  margin-right: -55px;
-  margin-left: -55px;
-}
-
-.text-babu, .icon-babu {
-  color: #34495E;
-}
-
-.text-blue, .icon-red {
-  color: #14325C;
-}
-
 // NAVBARS
 .navbar-default {
   background-color: #FFFFFF;
@@ -274,7 +226,7 @@ ul.nav.navbar-nav.navbar-right a {
   color: #fff;
   border-radius: 5px;
   padding: 9px 27px;
-  font-family: Ubuntu;
+  font-family: Arial;
 }
 
 .btn:hover, .btn:focus {
@@ -298,8 +250,8 @@ ul.nav.navbar-nav.navbar-right a {
 
 .btn.btn-normal:active {
   outline: none;
-  border-color: #e00007;
-  background-color: #e00007;
+  border-color: #BDC3C7;
+  background-color: #BDC3C7;
 }
 
 .btn.btn-form {
@@ -337,10 +289,10 @@ button.btn.btn-form.btn-small {
   background-color: #2d467b;
 }
 
-// PANELS
+// PANELS #2
 .panel-default .panel-heading {
-  color: #ffffff;
-  background-color: #2C3E50;
+  color: #FFF;
+  background-color: #FFF;
   font-size: 18px;
   font-weight: 400;
 }
@@ -382,6 +334,7 @@ button.btn.btn-form.btn-small {
 
 .avatar-full {
   width: 100%;
+  height: 100%;
 }
 
 // FORMS
