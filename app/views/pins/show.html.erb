@@ -39,7 +39,7 @@
 			  	<%= render @pin.comments %>
 				</section>
 				<% else %>
-          <li><%= link_to "Sign Up or Log In to leave a comment", new_user_session_path %></li>
+          <p class="btn btn-default"><%= link_to "Sign Up", new_user_registration_path %></p>&nbsp;<p class="text-center"> or </p><p class="btn btn-default"><%= link_to "Log In", new_user_session_path %></p><p class="text-center">to leave an anonymous comment</p>
 			<% end %>
 		</div>
 	</div>

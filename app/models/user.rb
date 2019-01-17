@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 belongs_to :user
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100#", :default_url => "/assets/images/blank.jpg"},
-  :source_file_options => { :all => '-auto-orient' }
+  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/assets/images/blank.jpg"
   validates_attachment_size :image, :less_than => 5.megabytes
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   
@@ -16,6 +15,8 @@ belongs_to :user
 
   has_many :pins, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :photos
+
   
   validates :name, presence: true
 

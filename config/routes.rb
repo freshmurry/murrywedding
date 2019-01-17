@@ -7,22 +7,8 @@ Rails.application.routes.draw do
 
   devise_for :users,
             path: '',		
-            path_names: {sign_in: 'login', sign_out: 'logout', edit: 'profile', sign_up: 'registration'},
+            path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'registration'},
             controllers: {omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}		
-  
-  resources :users, only: [:create, :destroy, :edit, :show] do
-    member do
-      get 'photo_upload'
-    end  
-    resources :photos, only: [:create, :destroy]
-  end  
-    
-  resources :conversations, only: [:index, :create]  do		
-     resources :messages, only: [:index, :create]
-   end
-   
-  # get '/notification_settings' => 'settings#edit'		
-  # post '/notification_settings' => 'settings#update'		
  		
    get '/notifications' => 'notifications#index'
 
