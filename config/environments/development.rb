@@ -41,5 +41,5 @@ Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.9.3-Q16/conve
   # config.action_view.raise_on_missing_translations = true
 
   #Required for Heroku
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'https://a9c4e68f017942d990924711b3b60dfd.vfs.cloud9.us-east-1.amazonaws.com/' }
 end

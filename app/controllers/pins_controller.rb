@@ -25,11 +25,7 @@ class PinsController < ApplicationController
       render action: 'new'
     end
   end
-  
-  def photo_upload
-    @photos = @pin.photos
-  end  
-  
+
   def update
     if @pin.update(pin_params)
       redirect_to @pin, notice: 'Pin was successfully updated.'

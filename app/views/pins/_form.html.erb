@@ -11,9 +11,16 @@
     </div>
   <% end %>
   
-  <div class="form-group">
-    <%= f.label :image %><br>
-    <%= f.file_field :image, class: "btn btn-default form-control" %>
+  <!--<div class="form-group">-->
+  <!--  <= f.label :image %><br>-->
+  <!--  <= f.file_field :image, class: "btn btn-default form-control" %>-->
+  <!--</div>-->
+  
+  <div class="form-group text-center">
+    <span class="btn btn-primary btn-file text-babu">
+      <i class="fa fa-cloud-upload" aria-hidden="true"></i> Select A Profile Photo
+        <%= f.file_field :image %>
+    </span></br>
   </div>
 
   <div class="form-group">
