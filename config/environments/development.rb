@@ -42,4 +42,16 @@ Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.9.3-Q16/conve
 
   #Required for Heroku
   config.action_mailer.default_url_options = { :host => 'https://a9c4e68f017942d990924711b3b60dfd.vfs.cloud9.us-east-1.amazonaws.com/' }
+  
+  # Mailgun Integration
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mailgun.org',
+    port: 2525,
+    domain: 'sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
+    authentication: 'plain',
+    user_name: 'postmaster@sandbox849ca54dc98b42888da6976e40db3c35.mailgun.org',
+    password: '20e436f9190a67c9fbb9b852ab52cae8'
+  }
 end
