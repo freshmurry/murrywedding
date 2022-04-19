@@ -19,10 +19,14 @@
   <div class="form-group text-center">
     <span class="btn btn-primary btn-file text-babu">
       <i class="fa fa-cloud-upload" aria-hidden="true"></i> Select A Profile Photo
-        <%= f.file_field :image %>
+        <%= f.file_field :image , type: :file, multiple: true %>
     </span></br>
   </div>
-
+  
+  <div class="panel-heading preview">
+    <%= image_tag photo.image.url() %>
+  </div>
+          
   <div class="form-group">
     <%= f.label :description %><br>
     <%= f.text_field :description, class: "form-control" %>
