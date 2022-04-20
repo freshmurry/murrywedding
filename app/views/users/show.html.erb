@@ -1,0 +1,47 @@
+<section class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="center">
+          <%= image_tag avatar_url(@user), class: "avatar-full" %>
+          <% if current_user && current_user != @user %>
+            <%= link_to "Send Message", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post, class: "btn btn-default" %>
+          <% end %>
+        </div>
+        <br/>
+        <div class="panel panel-default">
+          <div class="panel-heading">Verification</div>
+          <div class="panel-body">
+            <div class="container">
+              <ul class="sidebar-list">
+                <% if @user.confirmation_token %>
+                  <li>Email Address<span class="pull-right"><i class="fas fa-check-circle"></i></span></li>
+                <% end %>
+              </ul>
+            </div>  
+          </div>
+        </div>
+    
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="container">
+              <ul class="sidebar-list">
+                <li>Member since: <b><%= @user.created_at.strftime("%B %Y") %></b></li>&nbsp;
+                <li>Last login: <b><%= @user.last_sign_in_at.strftime("%A, %B %d, %Y") %></b></li>
+              </ul>
+            </div>  
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="col-md-9">
+        <h2 class="text-blue"><%= @user.fullname %></h2>
+        <div class="description row-space-3">
+          <%= @user.description %>
+        </div>
+    
+      </div>
+    </div>
+  </div>  
+</section>    
