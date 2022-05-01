@@ -12,21 +12,19 @@
 
 			<% if @pin.user == current_user %>
 				<div class="action">
-	      	<%= link_to edit_pin_path(@pin) do %>
-	        <span class="glyphicon glyphicon-edit"></span>
-	        	Edit
-	        <% end %>
-	        
-	        <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-	          <span class="glyphicon glyphicon-trash"></span>
-	            Delete
-	        <% end %>
-	      </div>
+		    	<%= link_to edit_pin_path(@pin) do %>
+		       <span class="glyphicon glyphicon-edit"></span> Edit
+	       <% end %>
+		      
+		      <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+		        <span class="glyphicon glyphicon-trash"></span> Delete
+		      <% end %>
+		    </div>
 			<% end %>
-
+			<hr />
       <% if user_signed_in? %>
-				<div class="comment-form"><hr />
-			  	<h3 class="action">Drop a Comment</h3>
+				<div class="comment-form">
+			  	<h3 class="action">Leave a Comment</h3>
 			  	<%= render 'comments/form' %>
 		    </div>	
 				<hr/>

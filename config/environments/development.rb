@@ -45,7 +45,7 @@ Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.9.3-Q16/conve
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   #Required for Heroku
-  config.action_mailer.default_url_options = { host: 'https://a9c4e68f017942d990924711b3b60dfd.vfs.cloud9.us-east-1.amazonaws.com' }
+  config.action_mailer.default_url_options = { host: 'https://bc632b032ffc4fa084c69bdd5a4e9179.vfs.cloud9.us-east-1.amazonaws.com' }
 
   # Mailgun Integration
   
