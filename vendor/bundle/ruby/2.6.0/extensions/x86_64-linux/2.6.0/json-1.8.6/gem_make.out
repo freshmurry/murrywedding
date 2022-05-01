@@ -1,0 +1,13 @@
+current directory: /home/ubuntu/environment/murrywedding/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+/home/ubuntu/.rvm/rubies/ruby-2.6.3/bin/ruby -I /home/ubuntu/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0 -r ./siteconf20220501-23104-ods6pq.rb extconf.rb
+creating Makefile
+
+current directory: /home/ubuntu/environment/murrywedding/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/ubuntu/environment/murrywedding/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/ubuntu/environment/murrywedding/vendor/bundle/ruby/2.6.0/gems/json-1.8.6/ext/json
+make "DESTDIR=" install
