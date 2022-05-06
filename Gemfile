@@ -1,11 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 gem 'rails', '5.0.2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -26,7 +21,7 @@ gem 'omniauth-facebook', '~> 4.0'
 gem 'toastr-rails', '~> 1.0'
 
 group :development, :test do
-	gem 'sqlite3'
+	gem 'sqlite3', '~> 1.3.6'
 	gem 'byebug'
 	gem 'rspec-rails'
   gem 'capybara'
