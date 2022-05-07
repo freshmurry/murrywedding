@@ -28,7 +28,7 @@ group :development, :test do
 end	
 
 group :production do
-	gem 'pg'
+	gem 'pg', '~> 0.20'
 	gem 'rails_12factor'
 end
 
@@ -41,7 +41,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'listen'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'capistrano-rails'
 end
 
