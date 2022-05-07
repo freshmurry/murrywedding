@@ -19,8 +19,13 @@
 
   "license": "MIT",
 
-  "engine": {
-    "node": ">=0.4"
+  // "engine": {
+  //   "node": ">=0.4"
+  // },
+  
+  "engines": {
+    "node": "16.5.0",
+    "npm": "8.5.5"
   },
 
   "scripts": {
