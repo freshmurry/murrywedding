@@ -1338,6 +1338,7 @@ GEM
     hashie (5.0.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    imagemagick-identify (0.0.1)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -1532,6 +1533,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   devise (~> 4.2)
+  imagemagick-identify (~> 0.0.1)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
