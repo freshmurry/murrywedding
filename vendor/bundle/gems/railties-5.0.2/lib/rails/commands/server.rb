@@ -12,13 +12,13 @@ module Rails
       def parse!(args)
         args, options = args.dup, {}
 
-        option_parser(options).parse! args
+        # option_parser(options).parse! args
 
         options[:log_stdout] = options[:daemonize].blank? && (options[:environment] || Rails.env) == "development"
         options[:server]     = args.shift
         options
       end
-
+  
       private
 
       def option_parser(options)
