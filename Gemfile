@@ -11,21 +11,23 @@ gem 'jquery-turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'devise', '~> 4.2'
-gem 'paperclip', '~> 5.0.0.beta'
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 2.8'
+gem 'paperclip', '~> 5.1.0'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'omniauth', '~> 1.6'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'toastr-rails', '~> 1.0'
 gem 'imagemagick-identify', '~> 0.0.1'
+gem 'puma'
 
 group :development, :test do
 	gem 'sqlite3', '~> 1.3.6'
 	gem 'byebug'
 	gem 'rspec-rails'
   gem 'capybara'
-end	
+  gem 'database_cleaner'
+end
 
 group :production do
 	gem 'pg', '~> 0.20'
