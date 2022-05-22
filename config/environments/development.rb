@@ -1,5 +1,5 @@
-Rails.application.configure do
-  Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.9.3-Q16/convert"
+MurryWedding::Application.configure do
+  # Paperclip.options[:command_path] = "/c/Program Files/ImageMagick-6.9.3-Q16/convert"
   # Paperclip.options[:command_path] = "/c/Program Files (x86)\GnuWin32\bin"
   # Paperclip.options[:command_path] = "/usr/local/bin/"
 
