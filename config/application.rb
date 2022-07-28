@@ -1,5 +1,5 @@
 # require File.expand_path('../boot', __FILE__)
-require_relative 'boot'
+# require_relative 'boot'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -26,6 +26,6 @@ module MurryWedding
     #Required for Heroku
     config.assets.initialize_on_precompile = false
     
-    # Paperclip.options[:command_path] = "/usr/local/bin/identify"
+    Paperclip.options[:command_path] = "/usr/local/bin/identify"
   end
 end
