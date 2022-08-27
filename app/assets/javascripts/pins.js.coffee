@@ -8,7 +8,7 @@
 #       itemSelector: '.box'
 #       isFitWidth: true
 
-$pins.imagesLoaded().masonry({
-  itemSelector: '.box';
-  isFitWidth: true;
-)};
+# $pins.imagesLoaded().masonry({
+#   itemSelector: '.box';
+#   isFitWidth: true;
+# )};
