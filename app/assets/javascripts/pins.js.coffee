@@ -2,13 +2,15 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$ ->
-  $('#pins').imagesLoaded ->
+  $('#pins').imagesLoaded({
     $('#pins').masonry
-      itemSelector: '.box'
+      itemSelector: '.box',
       isFitWidth: true
-
-# $pins.imagesLoaded().masonry({
-#   itemSelector: '.box';
-#   isFitWidth: true;
-# )};
+});
+  
+# EXAMPLE
+$('.grid').masonry({
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
