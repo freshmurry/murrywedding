@@ -25,9 +25,9 @@ gem 'imagemagick-identify', '~> 0.0.1'
 gem 'puma'
 
 group :development, :test do
-	gem 'sqlite3', '~> 1.3.6'
-	gem 'byebug'
-	gem 'rspec-rails'
+  gem 'sqlite3', '~> 1.3.6'
+  gem 'byebug'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'
 end
