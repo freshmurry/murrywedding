@@ -19,8 +19,9 @@
   <div class="form-group text-center">
     <span class="btn btn-primary btn-file text-babu">
       <i class="fa fa-cloud-upload" aria-hidden="true"></i> Select A Photo
-        <%= f.file_field :image, class: "btn btn-default form-control" %>
-<!--         <= file_field "images[]", class: "btn btn-default form-control", type: :file, multiple: true %> -->
+        <%= f.file_field :image, class: "btn btn-default form-control", method: 'post', html: {multipart: true} do |f| %>
+         <%= f.file_field "images[]", class: "btn btn-default form-control", type: :file, multiple: true %> 
+        <% end %>
     </span></br>
   </div>
 

@@ -13,11 +13,11 @@
 			<% if @pin.user == current_user %>
 				<div class="action">
 		    	<%= link_to edit_pin_path(@pin) do %>
-		       <span class="glyphicon glyphicon-edit"></span> Edit
+		       <span class="fa fa-edit"></span> Edit
 	       <% end %>
 		      
 		      <%= link_to @pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
-		        <span class="glyphicon glyphicon-trash"></span> Delete
+		        <span class="fa fa-trash"></span> Delete
 		      <% end %>
 		    </div>
 			<% end %>
